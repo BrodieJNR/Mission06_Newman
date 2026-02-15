@@ -11,7 +11,7 @@ namespace Mission06_Newman.Controllers
             return View();
         }
 
-        public IActionResult Privacy()
+        public IActionResult GetToKnowJoel()
         {
             return View();
         }
@@ -23,3 +23,4 @@ namespace Mission06_Newman.Controllers
         }
     }
 }
+
