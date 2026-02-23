@@ -22,9 +22,9 @@
 
             <!-- Category (required) -->
             <div class="form-group">
-                <label asp-for="Category" class="control-label"></label>
-                <input asp-for="Category" class="form-control" />
-                <span asp-validation-for="Category" class="text-danger"></span>
+                <label asp-for="CategoryId" class="control-label"></label>
+                <input asp-for="CategoryId" class="form-control" />
+                <span asp-validation-for="CategoryId" class="text-danger"></span>
             </div>
 
             <!-- Year (required) -->
@@ -54,30 +54,19 @@
                 <span asp-validation-for="Rating" class="text-danger"></span>
             </div>
 
-            <!-- Edited (True / False radio buttons) -->
+           
+            <!-- Edited (0 = No, 1 = Yes) -->
             <div class="mb-3">
-                <label class="form-label">Edited (Optional)</label>
-
-                <div class="form-check">
-                    <input class="form-check-input"
-                           type="radio"
-                           name="Edited"
-                           value="true"
-                           id="EditedTrue" />
-                    <label class="form-check-label" for="EditedTrue">True</label>
-                </div>
-
-                <div class="form-check">
-                    <input class="form-check-input"
-                           type="radio"
-                           name="Edited"
-                           value="false"
-                           id="EditedFalse" />
-                    <label class="form-check-label" for="EditedFalse">False</label>
-                </div>
-
+                <label asp-for="Edited" class="form-label">Edited</label>
+                <select asp-for="Edited" class="form-select">
+                    <option value="">-- Select --</option>
+                    <option value="0">No (0)</option>
+                    <option value="1">Yes (1)</option>
+                </select>
                 <span asp-validation-for="Edited" class="text-danger"></span>
             </div>
+
+
 
 
 
@@ -94,6 +83,19 @@
                 <input asp-for="Notes" class="form-control" maxlength="25" />
                 <span asp-validation-for="Notes" class="text-danger"></span>
             </div>
+
+            <!-- CopiedToPlex (0 = No, 1 = Yes) -->
+            <div class="mb-3">
+                <label asp-for="CopiedToPlex" class="form-label">Copied to Plex</label>
+                <select asp-for="CopiedToPlex" class="form-select">
+                    <option value="">-- Select --</option>
+                    <option value="0">No (0)</option>
+                    <option value="1">Yes (1)</option>
+                </select>
+                <span asp-validation-for="CopiedToPlex" class="text-danger"></span>
+            </div>
+
+
 
             <div class="form-group mt-3">
                 <input type="submit" value="Create" class="btn btn-primary" />

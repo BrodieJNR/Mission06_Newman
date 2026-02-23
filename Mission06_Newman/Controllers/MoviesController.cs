@@ -54,7 +54,7 @@ namespace Mission06_Newman.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("MovieId,Title,Category,Year,Director,Rating,Edited,LentTo,Notes")] Movie movie)
+        public async Task<IActionResult> Create([Bind("MovieId,Title,CategoryId,Year,Director,Rating,Edited,LentTo,Notes,CopiedToPlex")] Movie movie)
         {
             if (ModelState.IsValid)
             {
@@ -86,7 +86,7 @@ namespace Mission06_Newman.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("MovieId,Title,Category,Year,Director,Rating,Edited,LentTo,Notes")] Movie movie)
+        public async Task<IActionResult> Edit(int id, [Bind("MovieId,Title,CategoryId,Year,Director,Rating,Edited,LentTo,Notes,CopiedToPlex")] Movie movie)
         {
             if (id != movie.MovieId)
             {
